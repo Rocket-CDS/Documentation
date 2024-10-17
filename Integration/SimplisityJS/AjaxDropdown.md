@@ -1,5 +1,5 @@
 ﻿# Ajax DropDownList Example
-DropDownLists can be populated by ajax. This example show 2 dropdownlists, a country list and a region list. When the country list is selected the second list is populated with region data.  
+DropDownLists can be populated by ajax. This example shows 2 dropdownlists, a country list and a region list. When the country list is selected the second list is populated with region data.  
 
 ```
 <div>
@@ -35,3 +35,34 @@ The json return data should have 2 lists, "listkey" and "listvalue", The server 
 
 This functionality uses the "activevalue" param pasted to the server by simplisity.
 
+This functionality must have server side code that returns the correct values.
+```
+...
+case "settingcountry_getregion":
+    rtnDic.Add("outputhtml", "");
+    var regionlist = CountryUtils.RegionListJson(paramInfo.GetXmlProperty("genxml/hidden/activevalue"), paramInfo.GetXmlPropertyBool("genxml/hidden/allowempty"));
+    rtnDic.Add("outputjson", regionlist);
+    break;
+...
+```
+```
+public static object RegionListJson(string countrycode, bool allowempty = true)
+{
+    var jsonList = new List<ValuePair>();
+    var valuePair = new ValuePair();
+    if (allowempty)
+    {
+        valuePair.Key = "";
+        valuePair.Value = "";
+        jsonList.Add(valuePair);
+    }
+    foreach (var i in DNNrocketUtils.GetRegionList(countrycode))
+    {
+        valuePair = new ValuePair();
+        valuePair.Key = i.Key;
+        valuePair.Value = i.Value;
+        jsonList.Add(valuePair);
+    }
+    return jsonList;
+}
+```

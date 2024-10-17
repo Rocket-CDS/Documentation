@@ -1,20 +1,19 @@
 ﻿# Methods
-Simplisty has a few methods which are called to make things happen.
+Simplisty has a few methods which are used to make things happen.
 
 ```
 $(document).simplisityStartUp(string apiurl)
 ```
 This is the main activation for Simplisity. It searches the webpage for any html elements with "simplisity_panel" class. Simplisity will then process the command attributes attached to the html element.
 
-Options can also be passed. {systemkey: 'dnnrocket',activatepanel: true, overlayclass: 'w3-overlay'}.
+Options can also be passed. {systemkey: 'dnnrocket',activatepanel: true}.
 
 **systemkey**: You can pass a default systemkey to use if non are specifiecd on the simplisity_panel. This stops the need to specify the systemkey on each simplisity_panel.  
 **activatepanel**: Activate the simplsity_panels. Default:true  
-**overlayclass**: Defines a overlayclass to use, for when the server is called. Default: w3-overlay  
-**debug**: Puts the JS in debug mode. The browser console log will contain data to help debuging.  
+**debug**: Puts the JS in debug mode. The browser console log will contain data to help debuging.  Default: false
 *Example:*
 ```
-$(document).simplisityStartUp('/Desktopmodules/dnnrocket/api/rocket/action', { systemkey: 'rocketexample', usehistory: true, overlayclass:'w3-overlay w3-theme' });
+$(document).simplisityStartUp('/Desktopmodules/dnnrocket/api/rocket/action', { systemkey: 'rocketexample' });
 ```
 Each panel can be ativated individually if required.
 ```
