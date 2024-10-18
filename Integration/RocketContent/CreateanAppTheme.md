@@ -4,7 +4,7 @@ An AppTheme is a group of razor templates to render content on a display or admi
 You do not need to know razor to build an AppTheme.  Rocket AppThemes uses a standard format to help.  
 However....
 
-**If you do not know HTML or CSS, you should learn that before trying to build your own AppTheme.**
+**If you do not know HTML or CSS, you should learn that before trying to build your own AppTheme.**  
 
 #### The Editor
 

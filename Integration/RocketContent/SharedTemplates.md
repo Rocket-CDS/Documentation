@@ -1,40 +1,57 @@
-﻿To create high-performance, uncomplicated modules, there are shared templates.   
+﻿# Shared or Partial Templates
+
+To create high-performance, uncomplicated modules, there are shared templates.   
 These are templates used for specific functionalities and stop duplication of common requirements.
 
 To use a shared template you use a INJECT token (recommended) or the @RenderTemplate() token.
 
-**\[INJECT:appthemesystem,ArticleRowHeader.cshtml\]**  
-Standard input fields for a row heading.
+---
 
-**\[INJECT:appthemesystem,ArticleRowHeaderView.cshtml\]**  
+Standard input fields for a row heading.  
+```
+[INJECT:appthemesystem,ArticleRowHeader.cshtml]
+```
 Displays standard fields for a row heading.
-
-**\[INJECT:appthemesystem,ArticleLinks.cshtml\]**  
+```
+[INJECT:appthemesystem,ArticleRowHeaderView.cshtml]
+```
 Add multiple links 
-
-**\[INJECT:appthemesystem,ArticleLink.cshtml\]**  
+```
+[INJECT:appthemesystem,ArticleLinks.cshtml]
+```
 Add a single link
-
-**\[INJECT:appthemesystem,ArticleImages.cshtml\]**  
+```
+[INJECT:appthemesystem,ArticleLink.cshtml]
+```
 Add multiple images 
-
-**\[INJECT:appthemesystem,ArticleImage.cshtml\]**    
+```
+[INJECT:appthemesystem,ArticleImages.cshtml]
+```
 Add a single image
-
-**\[INJECT:appthemesystem,ArticleImagesSize.cshtml\]**  
+```
+[INJECT:appthemesystem,ArticleImage.cshtml]
+```
 Add multiple images with fields to define size
-
-**\[INJECT:appthemesystem,ArticleDocuments.cshtml\]**  
+```
+[INJECT:appthemesystem,ArticleImagesSize.cshtml]
+```
 Add multiple documents 
-
-**\[INJECT:appthemesystem,ArticleDocument.cshtml\]**  
+```
+[INJECT:appthemesystem,ArticleDocuments.cshtml]
+```
 Add a single document
-
-**\[INJECT:appthemesystem,ArticleHeader.cshtml\]**  
+```
+[INJECT:appthemesystem,ArticleDocument.cshtml]
+```
 Add a title, its size and alignment, for the headerData.
-
-**\[INJECT:appthemesystem,ArticleHeaderView.cshtml\]**  
+```
+[INJECT:appthemesystem,ArticleHeader.cshtml]
+```
 Display headerData.
-
-**\[INJECT:appthemesystem,CKEditor4.cshtml\]**  
+```
+[INJECT:appthemesystem,ArticleHeaderView.cshtml]
+```
 Adds a CDN for CKEditor. This token is to standardize across AppThemes.
+```
+[INJECT:appthemesystem,CKEditor4.cshtml]
+```
