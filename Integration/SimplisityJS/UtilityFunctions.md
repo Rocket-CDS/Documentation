@@ -12,6 +12,8 @@ Simplisity has some general functions which can be used.
 
 ##### ```simplisity_setCookieValue(cookiename,cookievalue)```
 >Set Cookie
+##### ```simplisity_deleteCookie(cookiename)```
+>Delete Cookie
 
 ##### ```simplisity_getSessionField(fieldname)```
 >Get Session var from cookie. (Session vars persist across post)

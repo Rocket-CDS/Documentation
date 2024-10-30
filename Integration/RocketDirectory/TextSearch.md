@@ -128,6 +128,16 @@ and (
 ```
 NOTE: The articlename index is used as the "articlename.GUIDKey" column.
 
+## Mixed XML and DNN search
+```
+{contains:viewsearchtext}
+and
+(
+([XMLData].value('(genxml/textbox/publisheddate)[1]','date') >= convert(date,'{searchdate1}') or '{searchdate1}' = '')
+and
+([XMLData].value('(genxml/textbox/publisheddate)[1]','date') <= convert(date,'{searchdate2}') or '{searchdate2}' = '')
+)
+```
 
 ## UserInRole
 
@@ -195,7 +205,7 @@ This example also included a ```{searchtext}```
 
 <div class="searchbar searchdata">
     <div class="searchbar-item">
-        <div class="searchbar-label">Par mot-clé</div>
+        <div class="searchbar-label">Search</div>
         <div class="searchbar-input">
             @TextBox(new SimplisityInfo(), "genxml/textbox/searchtext", " class='simplisity_sessionfield actionentrykey' autocomplete='off' ", sessionParams.Get("searchtext"))
             <span class="searchbar-btn clearsearch" style="display:none;" onclick="clearSearch();return false;">@ButtonIcon(ButtonTypes.cancel)</span>
@@ -275,9 +285,9 @@ The SQL filter settings are edited in the "Admin Settings" for the system.
 and 
 (
     (
-	    isnull(articlename.GUIDKey,'') like '%{searchtext}%'
-	    or isnull([XMLData].value('(genxml/textbox/articleref)[1]','nvarchar(max)'),'') like '%{searchtext}%'
-	    or isnull([XMLData].value('(genxml/lang/genxml/textbox/articlekeywords)[1]','nvarchar(max)'),'') like '%{searchtext}%'
+	    isnull(articlename.GUIDKey,'') like '%{viewsearchtext}%'
+	    or isnull([XMLData].value('(genxml/textbox/articleref)[1]','nvarchar(max)'),'') like '%{viewsearchtext}%'
+	    or isnull([XMLData].value('(genxml/lang/genxml/textbox/articlekeywords)[1]','nvarchar(max)'),'') like '%{viewsearchtext}%'
     )
 	and
 	(
