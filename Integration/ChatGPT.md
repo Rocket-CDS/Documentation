@@ -42,6 +42,6 @@ The Modal form needs to be added to the page.
 }
 @RenderTemplate("ChatGptForm.cshtml", appThemeRocketApi, Model, true)
 ```
-For RocketContent system use: "article_chatgpt" as the cmd.  
-For the RocketDirectory systems use: "rocketdirectoryapi_chatgpt" as the cmd.
+For RocketContent system use: [article_chatgpt] as the cmd.  
+For the RocketDirectory systems use: [rocketdirectoryapi_chatgpt] as the cmd.
 

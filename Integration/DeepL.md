@@ -37,5 +37,5 @@ The Modal form needs to be added to the page.
 }
 @RenderTemplate("DeepLForm.cshtml", appThemeRocketApi, Model, true)
 ```
-For RocketContent system use: "article_translate" as the cmd.  
-For the RocketDirectory systems use: "rocketdirectoryapi_translate" as the cmd.  
+For RocketContent system use: [article_translate] as the cmd.  
+For the RocketDirectory systems use: [rocketdirectoryapi_translate] as the cmd.  
