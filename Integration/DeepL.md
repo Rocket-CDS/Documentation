@@ -29,3 +29,13 @@ Example of Rich Text (CKEditor)
 </div>
 ```
 *NOTE: RichText has the html elements removed before translation.*  
+
+The Modal form needs to be added to the page.
+```
+@{
+    Model.SetSetting("deeplcmd", "article_translate");
+}
+@RenderTemplate("DeepLForm.cshtml", appThemeRocketApi, Model, true)
+```
+For RocketContent system use: "article_translate" as the cmd.  
+For the RocketDirectory systems use: "rocketdirectoryapi_translate" as the cmd.  

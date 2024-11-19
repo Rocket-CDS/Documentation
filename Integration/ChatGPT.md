@@ -34,3 +34,14 @@ Example of Rich Text (CKEditor)
     </div>
 </div>
 ```
+
+The Modal form needs to be added to the page.
+```
+@{
+    Model.SetSetting("chatgptcmd", "article_chatgpt");
+}
+@RenderTemplate("ChatGptForm.cshtml", appThemeRocketApi, Model, true)
+```
+For RocketContent system use: "article_chatgpt" as the cmd.  
+For the RocketDirectory systems use: "rocketdirectoryapi_chatgpt" as the cmd.
+
