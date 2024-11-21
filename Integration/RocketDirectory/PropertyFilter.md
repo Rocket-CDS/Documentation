@@ -110,7 +110,7 @@ The default 'PropertyFilter.cshtml' template uses standard class names for the d
 
 
 ### Module Property Group Settings.
-The property groups to be displayed for the tag system is defined in the module settings, using the AppTheme ThemeSettings.cshtml template. 
+The property groups to be displayed for the property system is defined in the module settings, using the AppTheme ThemeSettings.cshtml template. 
 
 ### ThemeSettings.cshtml
 ```
