@@ -2,7 +2,7 @@
 Text searching works with SQL and/or the DNN search system.  
 
 ## DNN Search
-The prefered method of text search is the DNN search.  It gives better performace, but less control.
+The preferred method of text search is the DNN search.  It gives better performance, but less control.
 
 ## Setup of the DNN Search
 - Ensure the DNN Scheduler is active.
@@ -42,7 +42,7 @@ The "Text Search" is given priority.
 
 ### When a Category is selected (With a "Text Search")
 - Any text search will **NOT** be cleared.    
-- **The category selected will be ignored**, becuase the "Text Search" is active. *(See Clearing the "Text Search")*  
+- **The category selected will be ignored**, because the "Text Search" is active. *(See Clearing the "Text Search")*  
 - The Filters and Tags will continue to persists and be applied to the results.  
 
 ### Default Category for a module
@@ -108,11 +108,11 @@ The sqlindex configuration is found in the "/system.rules" file.
 ```
 *These can be altered by editing the "system.rules" file and then you must do a validation of the system to rebuild the new index.*
 
-## Defaut SQL search filter 
+## Default SQL search filter  
  
 **IMPORTANT: The DNN search must be activated and you MUST also define a search page and search module in the Admin Settings of the RocketDirectory System.**  
 
-The DNN search musts be linked to a modules, when the articles are updated a flag is placed on the module to reindex the data that has changed.  
+The DNN search musts be linked to a modules, when the articles are updated a flag is placed on the module to index the data that has changed.  
 If you do not do this link the DNN search will return nothing and hence the article list will return ALL products without any searching.  
 
 ```
@@ -152,7 +152,7 @@ The sql filter supports testing for is a user is in a specific role.
 ```
 This allows filtering on a role system.
 
-### XML SQL filter exanple
+### XML SQL filter example
 ```
 and 
 (
