@@ -25,29 +25,6 @@ It can be difficult getting the DNN search to work on the category for the first
 
 **Remember:** The DNN search is controlled by DNN, there are options in Site Settings>Search.  The "Enable Part Word" option can be helpful, but it does slow the indexing.   
 
-## Search Rules
-
-"Category Select" and "Text Search" are mutually exclusive.  This is to make searching as simple as possible for end users.  
-The "Text Search" is given priority.
-
-*NOTE: If text searches need to be made on categories a plugin or system can be created with different rules.*  
-
-### When a text search is activated
-- The category selected will be cleared.  
-- The Filters and Tags will continue to persists and be applied to the results.  
-
-### When a Category is selected (Without a "Text Search")
-- The category results will be displayed.
-- The Filters and Tags will continue to persists and be applied to the results.  
-
-### When a Category is selected (With a "Text Search")
-- Any text search will **NOT** be cleared.    
-- **The category selected will be ignored**, because the "Text Search" is active. *(See Clearing the "Text Search")*  
-- The Filters and Tags will continue to persists and be applied to the results.  
-
-### Default Category for a module
-If there is a default category for a module it will be ignored if a text search is made.  The text search will be across all the articles.  
-
 ### Clearing the "Text Search"
 This can be done by clearing the search session cookie.  
 ```
