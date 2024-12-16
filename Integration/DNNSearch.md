@@ -23,5 +23,37 @@ If extra data fields are required they can be added to the "DNN Search extra" fi
 
 *NOTE: To stop RocketDirectory or sub-systems from indexing do not select a search module in the Admin settings*
 
+### Sub-System Search Activation
+Any sub-system of the RocketDirectory must have a **searchindex** provider defined in the system.rules file for the DNN search to work.
+```
+	  <genxml>
+		  <textbox>
+			  <interfacekey>searchindex</interfacekey>
+			  <namespaceclass>RocketDirectoryAPI.API.StartConnect</namespaceclass>
+			  <assembly>RocketDirectoryAPI</assembly>
+			  <interfaceicon></interfaceicon>
+			  <defaultcommand>article_search</defaultcommand>
+			  <relpath></relpath>
+		  </textbox>
+		  <providertype>searchindex</providertype>
+		  <dropdownlist>
+			  <group></group>
+		  </dropdownlist>
+		  <checkbox>
+			  <onmenu>false</onmenu>
+			  <active>true</active>
+		  </checkbox>
+		  <radio>
+			  <securityrolesadministrators>1</securityrolesadministrators>
+			  <securityrolesmanager>0</securityrolesmanager>
+			  <securityroleseditor>0</securityroleseditor>
+			  <securityrolesclienteditor>0</securityrolesclienteditor>
+			  <securityrolesregisteredusers>0</securityrolesregisteredusers>
+			  <securityrolessubscribers>0</securityrolessubscribers>
+			  <securityrolesall>0</securityrolesall>
+		  </radio>
+	  </genxml>
+```
+
 ## Re-Index 
 The re-index of the system can be done from the system Admin panel.
