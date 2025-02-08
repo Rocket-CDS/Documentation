@@ -25,14 +25,28 @@ It can be difficult getting the DNN search to work on the category for the first
 
 **Remember:** The DNN search is controlled by DNN, there are options in Site Settings>Search.  The "Enable Part Word" option can be helpful, but it does slow the indexing.   
 
+### Admin Search and Public Search
+There are 2 input names that can be used for the search.  This is because we want separation between the admin search and the website list search.  
+**You must use the correct textbox id for each view.**  The admin textbox is defined in "AdminSearch.cshtml", but any AppTheme should use the correct "viewsearchtext" id.  The SQL search filter can use either, it will be converted.  
+
+**Admin Search**
+```
+searchtext
+```
+**List Search**
+```
+viewsearchtext
+```
+
 ### Clearing the "Text Search"
 This can be done by clearing the search session cookie.  
 ```
+simplisity_setSessionField('viewsearchtext', '');
 simplisity_setSessionField('searchtext', '');
 ```
 Often we want to clear the "Text Search" when a category is selected.  This can be done by JS on the onclick event of the category menu.
 ```
-<a href="@DNNrocketUtils.NavigateURL(sessionParams.TabId, catDict, c.Name)" onclick="simplisity_setSessionField('searchtext', '');$('.simplisity_loader').show();" catid="@c.CategoryId" class="navgocolink" level="0">@c.Name</a>
+<a href="@DNNrocketUtils.NavigateURL(sessionParams.TabId, catDict, c.Name)" onclick="simplisity_setSessionField('searchtext', '');$('.simplisity_loader').show();">@c.Name</a>
 ```
 ### Clearing the "Selected Tag"
 ```
@@ -63,21 +77,9 @@ The sqlindex configuration is found in the "/system.rules" file.
 ```
 	  <sqlindex list="true">
 		  <genxml>
-			<systemkey>rocketdirectoryapi</systemkey>
-			<ref>articlename</ref>
-			<xpath>genxml/lang/genxml/textbox/articlename</xpath>
-			<typecode>rocketdirectoryapiART</typecode>
-		  </genxml>
-		  <genxml>
 			  <systemkey>rocketdirectoryapi</systemkey>
 			  <ref>publisheddate</ref>
 			  <xpath>genxml/textbox/publisheddate</xpath>
-			  <typecode>rocketdirectoryapiART</typecode>
-		  </genxml>
-		  <genxml>
-			  <systemkey>rocketdirectoryapi</systemkey>
-			  <ref>articleref</ref>
-			  <xpath>genxml/textbox/articleref</xpath>
 			  <typecode>rocketdirectoryapiART</typecode>
 		  </genxml>
 	  </sqlindex>
