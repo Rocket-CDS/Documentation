@@ -15,13 +15,12 @@ To install RocketCDS into an existing DNN website you can install ALL RocketCDS 
 
 #### Miniumum Modules Required
 ```
-0_DNNrocket_*.*.*_Install.zip
+DNNrocket_*.*.*_Install.zip
 RocketContentAPI_*.*.*_Install.zip
 RocketContentMod_*.*.*_Install.zip
 RocketDirectoryAPI_*.*.*_Install.zip
 RocketDirectoryMod_*.*.*_Install.zip
-RocketWebpUtils_*.*.*_Install.zip
-xRocketEndInstall.zip
+RocketEndInstall.zip
 ```
 ## RocketCDS Base Installation
 
