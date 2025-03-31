@@ -87,9 +87,9 @@ NOTE: The defaultcommand MUST be valid for the user or the interface will not ap
 
 Providers are assemblies that are used by the system, these are lose coupled to the system and are initiated by creating an instance based on the provider assembly, namespaceclass.  
 
-Providers are functionality like "scheduler", "events" and "plugins".  
+Providers are functionality like "scheduler", "events" and "plugins" (without UI, plugins with a UI are defined in the interfacedata section.)  
 
-The "providertype" set to "plugin" will make the provider appear on the list of plugins for a system.   
+*The "providertype" set to "plugin" will make the provider appear on the list of plugins for a system. (optional)*   
 
 ### groupsdata (optional)
 This is a list of groups that can exist on the menu, the term group refers to a top level menu.  Each UI interface can be a submenu of the group.  Some systems do not have sub-menus, in which case this can be ignored.
