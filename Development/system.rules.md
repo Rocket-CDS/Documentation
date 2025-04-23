@@ -89,7 +89,8 @@ Providers are assemblies that are used by the system, these are lose coupled to 
 
 Providers are functionality like "scheduler", "events" and "plugins" (without UI, plugins with a UI are defined in the interfacedata section.)  
 
-*The "providertype" set to "plugin" will make the provider appear on the list of plugins for a system. (optional)*   
+*NOTE: The "providertype" set to "plugin" will make the provider appear on the list of plugins for a system. This is optional, but if you want a plugin to be accessible from a system menu you need to copy the interface XML to the provider section and change the providertype to "plugin"*
+
 
 ### groupsdata (optional)
 This is a list of groups that can exist on the menu, the term group refers to a top level menu.  Each UI interface can be a submenu of the group.  Some systems do not have sub-menus, in which case this can be ignored.
