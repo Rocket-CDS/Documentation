@@ -55,3 +55,14 @@ Adds a CDN for CKEditor. This token is to standardize across AppThemes.
 ```
 [INJECT:appthemesystem,CKEditor4.cshtml]
 ```
+
+
+## Shared Repo AppTheme
+Each repo can have a shared template AppTheme. 
+The shared AppTheme must be called: rocketcontentapi.01shared
+
+Use "appthemeshared" to inject the repo template.
+
+```
+[INJECT:appthemeshared,ArticleRowHeader.cshtml]
+```
