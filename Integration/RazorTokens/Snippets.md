@@ -23,3 +23,9 @@ type1.Text = "Type One"
 type2.Text = "Type Two"
 type3.Text = "Type Three"
 ```
+
+*To display the localized value use the ResourceKey with the value added:*
+
+```
+@ResourceKey("MyResx." + info.GetXmlProperty("genxml/select/type"))
+```
