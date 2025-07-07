@@ -1,6 +1,6 @@
 # Adding CSS and JS files
 
-AppThemes often require their own CSS and JavaScript files.  This can be done inline in the template or by linking to a file.
+AppThemes often require their own CSS and JavaScript files. This can be done inline in the template or by linking to a file.
 
 #### Adding a CSS file
 
@@ -19,7 +19,7 @@ Create a folder called "dep" in the AppTheme
 /DesktopModules/RocketThemes/AppThemes-W3-CSS/rocketcontentapi.example1/1.0/dep
 ```
 
-Create a file called "example1.dep" with the following XML format.  This example is using the {appthemefolder} token.
+Create a file called "example1.dep" with the following XML format. This example is using the {appthemefolder} token.
 
 ```plaintext
 <genxml>
@@ -52,7 +52,7 @@ Create a folder called "dep" in the AppTheme
 /DesktopModules/RocketThemes/AppThemes-W3-CSS/rocketcontentapi.example1/1.0/dep
 ```
 
-Create a file called "example1.dep" with the following XML format.  This example is using the {appthemefolder} token.
+Create a file called "example1.dep" with the following XML format. This example is using the {appthemefolder} token.
 
 ```plaintext
 <genxml>

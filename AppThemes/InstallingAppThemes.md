@@ -3,7 +3,7 @@
 **The first thing you need to do is download AppThemes.**
 
 AppThemes are content blocks used to create websites.  
-In the Rocket Admin you can download the default AppThemes.  
+In the Rocket Admin you can download the default AppThemes.  A default set of Appthemes has been made using W3.CSS, called "AppThemes-W3-CSS".  https://github.com/Rocket-CDS/AppThemes-W3-CSS
 
 ### Step 1  
 

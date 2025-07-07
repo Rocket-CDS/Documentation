@@ -11,5 +11,3 @@ If an integrator understands CSS and HTML they will be able to edit and understa
 AppThemes are a group of text files that run on the website/web-system to create the required data entry and display.
 
 The text files are a mixture of types: CSS, HTML, RAZOR, XML.
-
-**Creating an AppTheme:**  [https://docs.rocket-cds.org/integration/rocketcontent/create-an-apptheme](https://docs.rocket-cds.org/integration/rocketcontent/create-an-apptheme)
