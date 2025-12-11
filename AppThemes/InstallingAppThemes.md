@@ -30,6 +30,8 @@ If public you just need to add the GitHub URL.
 
 The new GitHub repo will now be available on the download AppTheme Page.
 
+**IMPORTANT: The repo branch must be "main" or "master".**  
+
 ### Private Repo
 
 GitHub private repos can also be used, you need to create a GitHub Token for the repo and add it to the Repo information.
